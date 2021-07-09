@@ -38,8 +38,8 @@ integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQV
                 <h2>My products</h2>
             </div>
             <div class="pull-right">
-                <!-- <button class="btn btn-primary"></button> -->
-                <a class="btn btn-success" href="#"> Create New Product</a>
+                <button class="btn btn-success" id="btn-add">Create New Product</button>
+                <!-- <a id="btn-add" class="btn btn-success" href="#"> Create New Product</a> -->
             </div>
         </div>
     </div>
@@ -72,11 +72,15 @@ integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQV
 
                     <td>
                         <form action="/delete/clothes/{{$item['id']}}" method="POST">
-                            <a class="btn btn-primary" href="/update/clothes/{{$item['id']}}">Edit</a>
+                            <button class="btn btn-info open-modal" value="{{$item['id']}}">Edit
+                            </button>
+                           
+                            <!-- <a class="btn btn-primary" href="/update/clothes/{{$item['id']}}">Edit</a> -->
                         {{method_field('DELETE')}}
                         {!! csrf_field() !!}
-
-                            <button type="submit" class="btn btn-danger" value="delete">Delete</button>
+                             <button class="btn btn-danger delete-link" value="{{$item['id']}}">Delete
+                            </button>
+                            <!-- <button type="submit" class="btn btn-danger" value="delete">Delete</button> -->
                         </form>
                     </td>
                 </tr>
@@ -98,8 +102,7 @@ integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQV
                                 <div class="form-group">
                                     <label class="col-sm-2 control-label">Title</label>
                                     <div class="col-sm-10">
-                                        <input type="text" class="form-control" name="title"
-                                               placeholder="Enter title" value="">
+                                        <input type="text" class="form-control" name="title" id="title" placeholder="Enter title" value="">
                                     </div>
                                 </div>
 
@@ -108,7 +111,7 @@ integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQV
                                     <div class="col-sm-10">
                                         <!-- <input type="text" class="form-control" name="type" -->
                                                <!-- placeholder="type" value=""> -->
-                                        <select id="drop-down" name="type" class="browser-default custom-select">
+                                        <select id="drop-down" name="type" class="browser-default custom-select" id="type">
                                             <option selected="" ></option>
                                             <option value="Clothes">Clothes</option>
                                             <option value="Automotive">Automotive</option>
@@ -123,7 +126,7 @@ integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQV
                                     <div class="col-sm-10">
                                         <!-- <input type="text" class="form-control" name="type" -->
                                                <!-- placeholder="type" value=""> -->
-                                        <select id="drop-down" name="type" class="browser-default custom-select">
+                                        <select id="drop-down" name="type" class="browser-default custom-select" id="condition">
                                             <option selected="" ></option>
                                             <option value="New">New</option>
                                             <option value="Used">Used</option>
@@ -137,7 +140,7 @@ integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQV
                                         <h6>IDR (Indonesian rupiah)</h6>
                                     </label>
                                     <div class="col-sm-10">
-                                        <input type="text" class="form-control pricetag input-currency" type-currency="IDR" name="price" placeholder="Enter price" value="" >
+                                        <input type="text" class="form-control pricetag input-currency" type-currency="IDR" name="price" placeholder="Enter price" value="" id="price">
                                     </div>
                                 </div>
 
@@ -167,14 +170,14 @@ integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQV
                                 <div class="form-group">
                                     <label class="col-sm-2 control-label">Description</label>
                                     <div class="col-sm-10">
-                                        <textarea rows="2" class="form-control" name="description" placeholder="Enter description"></textarea>
+                                        <textarea rows="2" id="description" class="form-control" name="description" placeholder="Enter description"></textarea>
                                     </div>
                                 </div>
 
                                 <div class="form-group">
                                     <label class="col-sm-2 control-label">Image</label>
                                     <div class="col-sm-10">
-                                        <input type="file" class="form-control" name="image" placeholder="image">
+                                        <input type="file" id="image" class="form-control" name="image" placeholder="image">
                                     </div>
                                 </div>
 
