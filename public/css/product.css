@@ -23,14 +23,17 @@ section{
 
 }
 
-section .row .pull-right a{
+section .row .pull-right a {
     margin-top: 24px;
+}
+
+.pull-left{
+    padding-top: 24px;
 }
 
 /*table*/
 .table {
-    max-width: 50%;
-    /*margin-left: 80px;*/
+    width: 100%;
 
 }
 
@@ -41,4 +44,5 @@ table h3{
 .table td, .table th {
     padding: 10px;
     font-size: 15px;
+    width: 200px;
 }

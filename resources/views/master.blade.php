@@ -5,6 +5,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Laravel CRUD using AJAX</title>
 	<link rel="icon" href="icon_path" type="image/icon type">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" 
@@ -29,11 +30,11 @@
                 <nav class="header_menu">
                     <ul>
                         <li class="active"><a href="/">My Products</a></li>
-                        <li><a href="#">Sell</a></li>
+                        <li><a href="sell-product">Sell</a></li>
                     </ul>
                 </nav>
 
-                <form action="search" class="navbar-form navbar-left">
+                <!-- <form action="search" class="navbar-form navbar-left">
                 <div class="input-group" style="padding-left:65px;">
 
                     <input type="search" name="query" class="form-control rounded search-box" placeholder="Search" aria-label="Search" aria-describedby="search-addon"/>
@@ -42,7 +43,7 @@
 
                 </div>
 
-            </form>
+            </form> -->
             <br>
 
             </div>

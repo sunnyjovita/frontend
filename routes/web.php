@@ -13,19 +13,20 @@ use App\Http\Controllers\ProductController;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
 
 
 // get product
-Route::get('product', [ProductController::class, 'getProduct']);
+Route::get('/', [ProductController::class, 'getProduct']);
 
 // get each product
 Route::get('product/{id}', [ProductController::class, 'getDetail']);
 
 // post product 
-Route::post('product', [ProductController::class, 'postProduct']);
+Route::get('sell-product', [ProductController::class, 'sellProduct']);
+Route::post('sell-product', [ProductController::class, 'postProduct']);
 
 // update product
 Route::put('product/{id}', [ProductController::class, 'updateProduct']);

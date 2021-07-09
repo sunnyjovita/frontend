@@ -59,14 +59,16 @@ html, body{
 }
 
 .header_menu {
-    padding:10px 10px 0px 0px;
+    /*padding:20px 0px 0px 0px;*/
+    /*padding: 10px;*/
+    padding-top: 20px;
     text-align: center;
 }
 
 .header_menu ul li{
     position: relative;
     display: inline-block;
-    margin-right: 40px;
+    margin-right: 20px;
 }
 
 .header_menu ul li a{
