@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\ProductController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -14,3 +16,19 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+
+// get product
+Route::get('product', [ProductController::class, 'getProduct']);
+
+// get each product
+Route::get('product/{id}', [ProductController::class, 'getDetail']);
+
+// post product 
+Route::post('product', [ProductController::class, 'postProduct']);
+
+// update product
+Route::put('product/{id}', [ProductController::class, 'updateProduct']);
+
+// delete product
+Route::delete('product/{id}', [ProductController::class, 'deleteProduct']);
